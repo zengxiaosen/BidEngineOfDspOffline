@@ -22,12 +22,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bid_log_data.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_log_data.java">
+      <file leaf-file-name="bid_driver.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1853">
-              <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
-              <folding />
+            <state relative-caret-position="207">
+              <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1985#2007#0" expanded="true" />
+                <element signature="e#2961#3003#0" expanded="true" />
+                <element signature="e#3169#3177#0" expanded="true" />
+                <element signature="e#3252#3285#0" expanded="true" />
+                <element signature="e#5094#5377#0" expanded="true" />
+                <element signature="e#5376#5377#0" expanded="true" />
+                <element signature="e#5731#5764#0" expanded="true" />
+                <element signature="e#6239#6261#0" expanded="true" />
+                <element signature="e#10848#10862#0" expanded="true" />
+                <element signature="e#11721#11754#0" expanded="true" />
+                <element signature="e#13197#13516#0" expanded="true" />
+                <element signature="e#13515#13516#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function_collection_withP.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#810#850#0" expanded="true" />
+                <element signature="e#1199#1219#0" expanded="true" />
+                <element signature="e#1291#1316#0" expanded="true" />
+                <element signature="e#3714#3722#0" expanded="true" />
+                <element signature="e#8418#8443#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function_collection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dspid_allMeanOther_flat.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther_flat.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dspid_allMeanOther_collection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther_collection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding>
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+                <element signature="e#402#403#0" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
+                <element signature="e#512#513#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataLoader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataLoad/DataLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -42,117 +126,35 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataLoader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataLoad/DataLoader.java">
+      <file leaf-file-name="bid_log_data.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_log_data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+            <state relative-caret-position="193">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bid_dspinfo_data.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_dspinfo_data.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1987#1988#0" expanded="true" />
+                <element signature="e#2017#2018#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bid_driver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java">
+      <file leaf-file-name="dspid_allMeanOther.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="45" column="9" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1895#1917#0" expanded="true" />
-                <element signature="e#2871#2913#0" expanded="true" />
-                <element signature="e#3079#3087#0" expanded="true" />
-                <element signature="e#3162#3195#0" expanded="true" />
-                <element signature="e#5004#5287#0" expanded="true" />
-                <element signature="e#5286#5287#0" expanded="true" />
-                <element signature="e#5641#5674#0" expanded="true" />
-                <element signature="e#6149#6171#0" expanded="true" />
-                <element signature="e#10758#10772#0" expanded="true" />
-                <element signature="e#11631#11664#0" expanded="true" />
-                <element signature="e#13107#13426#0" expanded="true" />
-                <element signature="e#13425#13426#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="function_collection_withP.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="timestamp_dataObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/timestamp_dataObject.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#384#385#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/Test/test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#238#247#0" expanded="true" />
-                <element signature="e#341#350#0" expanded="true" />
-                <element signature="e#663#672#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/Test/test1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#254#281#0" expanded="true" />
-                <element signature="e#413#421#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Show.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/Show.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeStampProcess.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/TimeOperation/TimeStampProcess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -183,8 +185,12 @@
         <option value="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/Show.java" />
         <option value="$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/timestamp_dataObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/BidEngine/Test/test1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther_collection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther_flat.java" />
         <option value="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection.java" />
       </list>
     </option>
   </component>
@@ -196,10 +202,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-449" />
+    <option name="y" value="-1088" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -468,7 +474,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.48390806" />
   </component>
-  <component name="RunManager" selected="Application.bid_driver">
+  <component name="RunManager" selected="Application.function_collection">
     <configuration default="false" name="bid_driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -517,6 +523,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="BidEngine.Test.test1" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="BidEngineOfDspOffline" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="function_collection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="BidEngine.FunctionCollection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="BidEngine.FunctionCollection.function_collection" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -818,16 +844,18 @@
       <envs />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.bid_driver" />
       <item index="1" class="java.lang.String" itemvalue="Application.test" />
       <item index="2" class="java.lang.String" itemvalue="Application.test1" />
+      <item index="3" class="java.lang.String" itemvalue="Application.function_collection" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.bid_driver" />
-        <item index="1" class="java.lang.String" itemvalue="Application.test1" />
-        <item index="2" class="java.lang.String" itemvalue="Application.test" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.function_collection" />
+        <item index="1" class="java.lang.String" itemvalue="Application.bid_driver" />
+        <item index="2" class="java.lang.String" itemvalue="Application.test1" />
+        <item index="3" class="java.lang.String" itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -850,22 +878,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="-449" y="-1088" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4624183" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46161824" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19281046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24377593" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19771242" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25642964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -907,40 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_dspinfo_data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_dspinfo_biding_data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_log_data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="167" column="55" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataLoad/DataLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/TimeOperation/TimeStampProcess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -957,18 +951,6 @@
           <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/timestamp_dataObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="11" column="82" selection-start-line="11" selection-start-column="82" selection-end-line="11" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,34 +980,131 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/timestamp_dataObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="45" column="9" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="9" />
+        <state relative-caret-position="118">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1895#1917#0" expanded="true" />
-            <element signature="e#2871#2913#0" expanded="true" />
-            <element signature="e#3079#3087#0" expanded="true" />
-            <element signature="e#3162#3195#0" expanded="true" />
-            <element signature="e#5004#5287#0" expanded="true" />
-            <element signature="e#5286#5287#0" expanded="true" />
-            <element signature="e#5641#5674#0" expanded="true" />
-            <element signature="e#6149#6171#0" expanded="true" />
-            <element signature="e#10758#10772#0" expanded="true" />
-            <element signature="e#11631#11664#0" expanded="true" />
-            <element signature="e#13107#13426#0" expanded="true" />
-            <element signature="e#13425#13426#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        <state relative-caret-position="286">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#810#850#0" expanded="true" />
+            <element signature="e#1199#1219#0" expanded="true" />
+            <element signature="e#1291#1316#0" expanded="true" />
+            <element signature="e#3714#3722#0" expanded="true" />
+            <element signature="e#8418#8443#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther_flat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/dspid_allMeanOther_collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_log_data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_dspinfo_data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#1987#1988#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataLoad/DataLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_dspinfo_biding_data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="31" column="35" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1985#2007#0" expanded="true" />
+            <element signature="e#2961#3003#0" expanded="true" />
+            <element signature="e#3169#3177#0" expanded="true" />
+            <element signature="e#3252#3285#0" expanded="true" />
+            <element signature="e#5094#5377#0" expanded="true" />
+            <element signature="e#5376#5377#0" expanded="true" />
+            <element signature="e#5731#5764#0" expanded="true" />
+            <element signature="e#6239#6261#0" expanded="true" />
+            <element signature="e#10848#10862#0" expanded="true" />
+            <element signature="e#11721#11754#0" expanded="true" />
+            <element signature="e#13197#13516#0" expanded="true" />
+            <element signature="e#13515#13516#0" expanded="true" />
           </folding>
         </state>
       </provider>

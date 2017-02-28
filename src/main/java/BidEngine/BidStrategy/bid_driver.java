@@ -29,11 +29,12 @@ public class bid_driver {
         //dataObjectList是一个含有所有时间片的list，每个元素是一个时间片内的数据
         List<timestamp_dataObject> timestamp_dataObjects_list = GetTDObjectList(MeanTotal);
         //假设dspid=11214,n为第几个时间片,p为给第n个时间片的概率值
-        Integer dspid_test = 11214;
+        Integer dspid_test = 11215;
         Integer n_test = 3;
+        Double budget = 5000.0;
         //返回还剩预算
-        Double TotalBudget_EffectOfP = function_collection_withP.Pintellegance_dspId(timestamp_dataObjects_list, dspid_test, n_test);
-
+        Double TotalBudget_EffectOfP = function_collection_withP.Pintellegance_dspId(timestamp_dataObjects_list, dspid_test, n_test, budget);
+        System.out.println(TotalBudget_EffectOfP);
 
     }
 
