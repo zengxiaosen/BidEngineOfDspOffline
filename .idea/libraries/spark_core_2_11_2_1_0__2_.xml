@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="spark-core_2.11-2.1.0 (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../spark-core_2.11-2.1.0 (2).jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
