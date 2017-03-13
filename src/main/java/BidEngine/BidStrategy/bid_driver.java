@@ -352,7 +352,7 @@ public class bid_driver {
                             positionCount = split_biding[15];
                             ArrayList<String> temp1 = new ArrayList<String>();
                             temp1.add(ideaId);
-                            temp1.add(reqDealId);
+                            temp1.add(resDealId);
                             temp1.add(winnerCost);
                             temp1.add(isWinnerDsp);
                             temp1.add(bidPrice);
