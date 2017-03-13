@@ -23,11 +23,7 @@ public class function_collection {
         return f2;
     }
 
-    public static void PtoBid(HashMap<Double, ArrayList<StringBuffer>> ConcernedDataOfIdeaId,
-                              HashMap<Double, Double> allInto){
-        //对每一次的竞价中，ideaid赋予一个概率P
 
-    }
 
 
 
