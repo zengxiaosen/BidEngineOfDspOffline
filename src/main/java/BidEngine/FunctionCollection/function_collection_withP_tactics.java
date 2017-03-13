@@ -53,7 +53,7 @@ public class function_collection_withP_tactics {
                     q.offer(bidprice);
                     ideaQueue.put(ideaid, q);
                 }else if(iswinnerdsp.equals("0")){
-                    
+
                 }
 
 
