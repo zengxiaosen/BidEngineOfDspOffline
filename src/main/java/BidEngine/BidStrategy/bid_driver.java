@@ -3,8 +3,10 @@ package BidEngine.BidStrategy;
 import BidEngine.DataLoad.DataLoader;
 import BidEngine.DataStruct.bid_log_data;
 import BidEngine.DataStruct.timestamp_dataObject;
+import BidEngine.DataStruct.timestamp_dataObjectUpdate;
 import BidEngine.FunctionCollection.Show;
 import BidEngine.FunctionCollection.function_collection_withP;
+import BidEngine.FunctionCollection.function_collection_withP_update;
 import BidEngine.TimeOperation.TimeStampProcess;
 import javafx.scene.chart.PieChart;
 import jdk.nashorn.internal.runtime.regexp.joni.constants.Traverse;
@@ -27,14 +29,25 @@ public class bid_driver {
         //得到MeanTotal数据结构
         ArrayList<HashMap<String, ArrayList<StringBuffer>>> MeanTotal = GetMeanTotal(arrayList);
         //dataObjectList是一个含有所有时间片的list，每个元素是一个时间片内的数据
+        //取的都是dspid对应的第一个idea的信息
         List<timestamp_dataObject> timestamp_dataObjects_list = GetTDObjectList(MeanTotal);
+        //取的都是dspid对应的所有idea的信息
+        List<timestamp_dataObject> timestamp_dataObjects_list1 = GetTDObjectList1(MeanTotal);
+        //timestamp_dataObjectUpdateList是一个含有所有时间片的list，每个元素是一个时间片内的数据
+        //也就是一个时间片内的各个request以及对应请求的各个idea的数据
+        List<timestamp_dataObjectUpdate> timestamp_dataObjectUpdate_list = GetTDObjectListUpdate(MeanTotal);
         //假设dspid=11214,n为第几个时间片,p为给第n个时间片的概率值
-        Integer dspid_test = 11215;
+        Integer dspid_test = 11167;
         Integer n_test = 3;
         Double budget = 5000.0;
         //返回还剩预算
-        Double TotalBudget_EffectOfP = function_collection_withP.Pintellegance_dspId(timestamp_dataObjects_list, dspid_test, n_test, budget);
-        System.out.println(TotalBudget_EffectOfP);
+        //Double TotalBudget_EffectOfP = function_collection_withP.Pintellegance_dspId(timestamp_dataObjects_list, dspid_test, n_test, budget);
+        //System.out.println(TotalBudget_EffectOfP);
+
+        //新需求：以banner为单位统计加入概率值之前以及之后的各项信息指标
+        //统计不加策略的情况下，
+        function_collection_withP_update.Pintellegance_dspId(timestamp_dataObjects_list1, dspid_test);
+
 
     }
 
@@ -59,6 +72,308 @@ public class bid_driver {
             timestamp_dataObjects_list1.add(tdo);
         }
         return timestamp_dataObjects_list1;
+    }
+
+    private static List<timestamp_dataObject> GetTDObjectList1(ArrayList<HashMap<String, ArrayList<StringBuffer>>> MeanTotal) {
+        List<timestamp_dataObject> timestamp_dataObjects_list1 = new ArrayList<timestamp_dataObject>();
+        //分时间片进行处理
+        for(int i=0; i< MeanTotal.size(); i++){
+            HashMap<String, ArrayList<StringBuffer>> Data_t = MeanTotal.get(i);
+            //datainformation_new_merge得到一个时间片内重新格式化的信息，以dspid为key
+            HashMap<String, ArrayList<StringBuffer>> datainformation_new_merge = GetDatainformationMerge1(Data_t);
+            //以dspid为key进行排序，后续可能用到
+            List arrayList_new_merge = SortByDspid(datainformation_new_merge);
+            timestamp_dataObject tdo = new timestamp_dataObject(datainformation_new_merge);
+            timestamp_dataObjects_list1.add(tdo);
+        }
+        return timestamp_dataObjects_list1;
+    }
+
+    /**
+     * 解析为：这一个时间片内以dspid为key的数据结构
+     * @param Data_t
+     * @return
+     */
+    private static HashMap<String,ArrayList<StringBuffer>> GetDatainformationMerge1(HashMap<String, ArrayList<StringBuffer>> Data_t) {
+        //在这个时间片的所有request中，统一统计以dspid为单位，及它对应的各个idea的信息
+        HashMap<String, ArrayList<StringBuffer>> datainformation_new_merge = new HashMap<String, ArrayList<StringBuffer>>();
+        //一个时间片内有很多次投递行为
+        for(Map.Entry<String, ArrayList<StringBuffer>> entry: Data_t.entrySet()){
+            //每次投递行为有很多dsp竞争
+            String key = entry.getKey();
+            String time = key.split("!")[0];
+            String ad_request_id = key.split("!")[1];
+            //ArrayList包含很多家dsp信息，StringBuffer里面是一家dsp的各个字段
+            ArrayList<StringBuffer> val = entry.getValue();
+
+            HashMap<String,StringBuffer> datainformation_new = new HashMap<String, StringBuffer>();
+            //解析出val属性
+            for(int j=0; j< val.size(); j++){
+
+                //每次是一家dsp的信息
+                StringBuffer temp = val.get(j);
+                String[] split_data = temp.toString().split("\\!");
+                String ad_request_id_new = ad_request_id;
+
+                String dspid = null;
+                String biding = null;
+                String adxPid = null;
+                String reqDealId = null;
+                String reqPdbDealId = null;
+                String ext = null;
+
+                String bidPrice = null;
+                String status = null;
+                String isWinnerDsp = null;
+                String winnerCost = null;
+                String advertiserid = null;
+                String ideaId = null;
+                String adposition = null;
+                String resDealId = null;
+                String ideaType = null;
+                String ideaLength = null;
+                String ideaBottomPrice = null;
+                String orderid = null;
+                String castid = null;
+                String pdbDealid = null;
+                String cardId = null;
+                String positionCount = null;
+                int count = 0;
+                String[] split_idea = null;
+                StringBuffer val_new = new StringBuffer();
+                for (String s : split_data) {
+                    if(count == 0){
+                        dspid = s;//dspid ，>0 的值， =1 表示ATM
+                        count ++;
+                    }else if(count == 1){
+                        biding = s;//dsp 对请求每个素材位置的出价信息，是个组合字段，每个字段用“,”分割,不同素材位置用“@”分割 ，具体信息见 biding 表
+                        count ++;
+                        //切割biding字段
+                        //切分不同的素材
+                        split_idea = null;
+                        split_idea = biding.toString().trim().replace("@", "!").toString().split("!");
+                        for(int z=0; z< split_idea.length; z++){
+                            String biddata = split_idea[z];
+                            String[] split_biding = biding.toString().trim().replace(",","#").toString().split("#");
+                            bidPrice = split_biding[0];
+                            status = split_biding[1];
+                            isWinnerDsp = split_biding[2];
+                            winnerCost = split_biding[3];
+                            advertiserid = split_biding[4];
+                            ideaId = split_biding[5];
+                            adposition = split_biding[6];
+                            resDealId = split_biding[7];
+                            ideaType = split_biding[8];
+                            ideaLength = split_biding[9];
+                            ideaBottomPrice = split_biding[10];
+                            orderid = split_biding[11];
+                            castid = split_biding[12];
+                            pdbDealid = split_biding[13];
+                            cardId = split_biding[14];
+                            positionCount = split_biding[15];
+
+                            val_new.append(bidPrice).append("!").
+                                    append(status).append("!").
+                                    append(isWinnerDsp).append("!").
+                                    append(winnerCost).append("!").
+                                    append(advertiserid).append("!").
+                                    append(ideaId).append("!").
+                                    append(adposition).append("!").
+                                    append(resDealId).append("!").
+                                    append(ideaType).append("!").
+                                    append(ideaLength).append("!").
+                                    append(ideaBottomPrice).append("!").
+                                    append(orderid).append("!").
+                                    append(castid).append("!").
+                                    append(pdbDealid).append("!").
+                                    append(cardId).append("!").
+                                    append(positionCount);
+                            if(z != (split_idea.length - 1)){
+                                val_new.append("#");
+                            }
+
+                        }
+
+                    }else if( count == 2){
+                        adxPid = s;//adx广告位
+                        count ++;
+                    }else if( count == 3){
+                        reqDealId = s;//请求的普通dealid 列表，可能是多个，用竖线'|'分隔。默认为0
+                        count ++;
+                    }else if( count == 4){
+                        reqPdbDealId = s;//请求的PDB dealid 列表 ，可能是多个，用竖线'|'分隔。如果没有PDB请求记录为0 2016-05-17 增加
+                        count ++;
+                    }else if(count == 5){
+                        ext = s;//dsp 维度的 扩展字段。 rt=xxx:DSP的响应时间，单位为毫秒; dspStatus=1或者0,1 DSP 是正式投放，0 DSP为测试投放;
+                    }
+                }
+
+                String key_new = dspid;
+
+                ArrayList<StringBuffer> ll = datainformation_new_merge.get(key_new);
+                if(ll == null || ll.equals("")){
+                    ll = new ArrayList<StringBuffer>();
+                }
+                ll.add(val_new);
+                datainformation_new_merge.put(key_new, ll);
+
+            }
+
+
+        }
+
+        //datainformation_new_merge得到一个时间片内重新格式化的信息，以dspid为key
+
+
+        return datainformation_new_merge;
+    }
+
+
+    private static List<timestamp_dataObjectUpdate> GetTDObjectListUpdate(ArrayList<HashMap<String, ArrayList<StringBuffer>>> MeanTotal) {
+        List<timestamp_dataObjectUpdate> timestamp_dataObjects_list1 = new ArrayList<timestamp_dataObjectUpdate>();
+        //分时间片进行处理
+        for(int i=0; i< MeanTotal.size(); i++){
+            //一个时间片内
+            //key：time_adrequestid
+            HashMap<String, ArrayList<StringBuffer>> Data_t = MeanTotal.get(i);
+            //datainformation_new_merge得到一个时间片内重新格式化的信息，以dspid为key
+            //HashMap<String, ArrayList<StringBuffer>> datainformation_new_merge = GetDatainformationMerge(Data_t);
+            //对每次adrequest，以adrequest为key，得出11167这个dsp的各个requestid对应的ideaid信息map，这个hashmap存着<ideaid, List<ideaid, winnercost, bidprice, ....>
+            HashMap<String, HashMap<String, ArrayList<String>>> datainformation_new_merge_update = GetDatainformationMergeUpdate(Data_t);
+
+            timestamp_dataObjectUpdate tdo = new timestamp_dataObjectUpdate(datainformation_new_merge_update);
+            timestamp_dataObjects_list1.add(tdo);
+        }
+        return timestamp_dataObjects_list1;
+    }
+
+    /**
+     * 得到一个hashmap，对于dsp11167来说的！
+     * key为requestid, value是一个hashmap，
+     * 这个hashmap存着<ideaid, List<ideaid, winnercost, bidprice, ....>
+     * @param Data_t
+     * @return
+     */
+    private static  HashMap<String, HashMap<String, ArrayList<String>>> GetDatainformationMergeUpdate(HashMap<String, ArrayList<StringBuffer>> Data_t) {
+        HashMap<String, HashMap<String, ArrayList<String>>> datainformation_new_merge = new HashMap<String, HashMap<String, ArrayList<String>>>();
+        //一个时间片内有很多次投递行为
+        for(Map.Entry<String, ArrayList<StringBuffer>> entry: Data_t.entrySet()){
+            //每次投递行为有很多dsp竞争
+            String key = entry.getKey();
+            String time = key.split("!")[0];
+            String ad_request_id = key.split("!")[1];
+            //ArrayList包含很多家dsp信息，StringBuffer里面是一家dsp的各个字段
+            ArrayList<StringBuffer> val = entry.getValue();
+
+            //HashMap<String,ArrayList<String>> datainformation_new = new HashMap<String, ArrayList<String>>();
+            //解析出val属性
+            String[] split_idea = null;
+            String dspid = null;
+            String ad_request_id_new = null;
+            for(int j=0; j< val.size(); j++){
+
+                //每次是一家dsp的信息, 这里只需要选出11167dsp
+                StringBuffer temp = val.get(j);
+                String[] split_data = temp.toString().split("\\!");
+                ad_request_id_new = ad_request_id;
+
+                dspid = null;
+                String biding = null;
+                String adxPid = null;
+                String reqDealId = null;
+                String reqPdbDealId = null;
+                String ext = null;
+
+                String bidPrice = null;
+                String status = null;
+                String isWinnerDsp = null;
+                String winnerCost = null;
+                String advertiserid = null;
+                String ideaId = null;
+                String adposition = null;
+                String resDealId = null;
+                String ideaType = null;
+                String ideaLength = null;
+                String ideaBottomPrice = null;
+                String orderid = null;
+                String castid = null;
+                String pdbDealid = null;
+                String cardId = null;
+                String positionCount = null;
+                int count = 0;
+                split_idea = null;
+                HashMap<String, ArrayList<String>> result = null;
+                for (String s : split_data) {
+                    if(count == 0){
+                        dspid = s;//dspid ，>0 的值， =1 表示ATM
+                        if(dspid.equals("11167")){
+                            count++;
+                        }else{
+                            break;//break一层
+                        }
+
+                    }else if(count == 1){
+                        biding = s;//dsp 对请求每个素材位置的出价信息，是个组合字段，每个字段用“,”分割,不同素材位置用“@”分割 ，具体信息见 biding 表
+                        count ++;
+                        //切割biding字段
+                        //切分不同的素材
+                        split_idea = biding.toString().trim().replace("@","!").toString().split("!");
+                        result = new HashMap<String, ArrayList<String>>();
+                        for(int z=0; z< split_idea.length; z++){
+                            String biddata = split_idea[z];
+                            String[] split_biding = biddata.toString().trim().replace(",", "#").toString().split("#");
+                            bidPrice = split_biding[0];
+                            status = split_biding[1];
+                            isWinnerDsp = split_biding[2];
+                            winnerCost = split_biding[3];
+                            advertiserid = split_biding[4];
+                            ideaId = split_biding[5];
+                            adposition = split_biding[6];
+                            resDealId = split_biding[7];
+                            ideaType = split_biding[8];
+                            ideaLength = split_biding[9];
+                            ideaBottomPrice = split_biding[10];
+                            orderid = split_biding[11];
+                            castid = split_biding[12];
+                            pdbDealid = split_biding[13];
+                            cardId = split_biding[14];
+                            positionCount = split_biding[15];
+                            ArrayList<String> temp1 = new ArrayList<String>();
+                            temp1.add(ideaId);
+                            temp1.add(reqDealId);
+                            temp1.add(winnerCost);
+                            temp1.add(isWinnerDsp);
+                            temp1.add(bidPrice);
+                            result.put(ideaId, temp1);
+
+                        }
+
+                    }else if( count == 2){
+                        adxPid = s;//adx广告位
+                        count ++;
+                    }else if( count == 3){
+                        reqDealId = s;//请求的普通dealid 列表，可能是多个，用竖线'|'分隔。默认为0
+                        count ++;
+                    }else if( count == 4){
+                        reqPdbDealId = s;//请求的PDB dealid 列表 ，可能是多个，用竖线'|'分隔。如果没有PDB请求记录为0 2016-05-17 增加
+                        count ++;
+                    }else if(count == 5){
+                        ext = s;//dsp 维度的 扩展字段。 rt=xxx:DSP的响应时间，单位为毫秒; dspStatus=1或者0,1 DSP 是正式投放，0 DSP为测试投放;
+                    }
+                }
+                if(dspid.equals("11167")){
+                    String key_new = ad_request_id_new;
+                    HashMap<String,ArrayList<String>> ll = datainformation_new_merge.get(key_new);
+                    if(ll == null || ll.equals("")){
+                        ll = result;
+                    }
+                    datainformation_new_merge.put(key_new, ll);
+                }
+            }
+
+            //
+        }
+        return datainformation_new_merge;
     }
 
     private static ArrayList<HashMap<String,ArrayList<StringBuffer>>> GetMeanTotal(List arrayList) {
@@ -233,7 +548,7 @@ public class bid_driver {
                         append(positionCount).append("!").
                         append(ad_request_id_new);
 
-                if(!datainformation_new_merge.containsKey(key_new)){
+                /*if(!datainformation_new_merge.containsKey(key_new)){
                     ArrayList<StringBuffer> l1 = new ArrayList<StringBuffer>();
                     l1.add(val_new);
                     datainformation_new_merge.put(key_new,  l1);
@@ -245,7 +560,14 @@ public class bid_driver {
                     ll1.add(val_new);
                     datainformation_new_merge.remove(key_new);
                     datainformation_new_merge.put(key_new1, ll1);
+                }*/
+
+                ArrayList<StringBuffer> ll = datainformation_new_merge.get(key_new);
+                if(ll == null || ll.equals("")){
+                    ll = new ArrayList<StringBuffer>();
                 }
+                ll.add(val_new);
+                datainformation_new_merge.put(key_new, ll);
 
             }
 

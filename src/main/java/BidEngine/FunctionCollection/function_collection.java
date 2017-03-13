@@ -1,6 +1,10 @@
 package BidEngine.FunctionCollection;
 
 import java.math.BigDecimal;
+import java.net.ServerSocket;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -18,6 +22,15 @@ public class function_collection {
         double f2 = bg.setScale(4, BigDecimal.ROUND_DOWN).doubleValue();
         return f2;
     }
+
+    public static void PtoBid(HashMap<Double, ArrayList<StringBuffer>> ConcernedDataOfIdeaId,
+                              HashMap<Double, Double> allInto){
+        //对每一次的竞价中，ideaid赋予一个概率P
+
+    }
+
+
+
 
     public static void main(String[] args){
         Double f = GetMyRandom();
