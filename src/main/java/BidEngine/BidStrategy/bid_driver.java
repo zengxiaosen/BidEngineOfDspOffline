@@ -6,6 +6,7 @@ import BidEngine.DataStruct.timestamp_dataObject;
 import BidEngine.DataStruct.timestamp_dataObjectUpdate;
 import BidEngine.FunctionCollection.Show;
 import BidEngine.FunctionCollection.function_collection_withP;
+import BidEngine.FunctionCollection.function_collection_withP_tactics;
 import BidEngine.FunctionCollection.function_collection_withP_update;
 import BidEngine.TimeOperation.TimeStampProcess;
 import javafx.scene.chart.PieChart;
@@ -45,9 +46,20 @@ public class bid_driver {
         //System.out.println(TotalBudget_EffectOfP);
 
         //新需求：以banner为单位统计加入概率值之前以及之后的各项信息指标
-        //统计不加策略的情况下，
-        function_collection_withP_update.Pintellegance_dspId(timestamp_dataObjects_list1, dspid_test);
+        //统计不加策略的情况下，各idea素材的数据指标,并返回每个素材ideaid对应的预算budget, 用ideaid所有的bidprice×100作为素材的预算
+        HashMap<Double, Double> ideaid_budget = function_collection_withP_update.Pintellegance_dspId(timestamp_dataObjects_list1, dspid_test);
 
+        //接入策略
+        /**
+         * 对adxpid=56，dspid=11167的竞价数据，统计在每个ideaid出价之前事先给予一个random值。
+         若这个ideaid最后赢了，并且它事先的random值大于0.5，则出价，也就是所对应的各项数据不变；
+         若这个ideaid最后赢了，而且它事先的random值小于等于0.5，则不出价，那么各项指标需要更改，并且把对应的出价bidprice压入队列queue中，每个ideaid维护这样一条queue；
+         若这个ideaid最后输了，如果在时间片内它之前的时间段，有这个ideaid赢了而random值小于0.5的情况，那么就把该ideaid所对应的queue取出一个bidprice，替换掉本bidprice重新参与竞价，
+         在本广告位adxpid同一次请求requestid的情况下和其他dspid进行bidprice数据对比
+         ， 如果它最后还是没有赢，就不改变其他状态数据，如果它最后赢了，就改变其他状态数据。
+         */
+
+        function_collection_withP_tactics.Pintellegance_IdeaId(timestamp_dataObjectUpdate_list, ideaid_budget);
 
     }
 

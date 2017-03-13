@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b329b30-5132-4e08-8ab0-9b7e5b41431e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/timestamp_dataObjectUpdate.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/leetcode/AddBinary.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/leetcode/AddTwoNumbers.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/leetcode/Anagrams.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/leetcode/BalancedBinaryTree.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/leetcode/BestTimetoBuyandSellStock.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BidEngine/BidStrategy/bid_driver$1.class" afterPath="$PROJECT_DIR$/target/classes/BidEngine/BidStrategy/bid_driver$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BidEngine/BidStrategy/bid_driver$2.class" afterPath="$PROJECT_DIR$/target/classes/BidEngine/BidStrategy/bid_driver$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_tactics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BidEngine/BidStrategy/bid_driver.class" afterPath="$PROJECT_DIR$/target/classes/BidEngine/BidStrategy/bid_driver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BidEngine/FunctionCollection/function_collection.class" afterPath="$PROJECT_DIR$/target/classes/BidEngine/FunctionCollection/function_collection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BidEngine/FunctionCollection/function_collection_withP_update.class" afterPath="$PROJECT_DIR$/target/classes/BidEngine/FunctionCollection/function_collection_withP_update.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java" afterPath="$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection.java" afterPath="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/leetcode/_4Sum.java" afterPath="$PROJECT_DIR$/src/main/java/leetcode/_4Sum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java" afterPath="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java" />
     </list>
     <ignored path="BidEngineOfDspOffline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,22 +29,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="function_collection_withP_update.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="function_collection_withP_update.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+            <state relative-caret-position="-187">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#680#696#0" expanded="true" />
-                <element signature="e#804#820#0" expanded="true" />
-                <element signature="e#931#947#0" expanded="true" />
-                <element signature="e#1300#1320#0" expanded="true" />
-                <element signature="e#1392#1417#0" expanded="true" />
-                <element signature="e#1936#1969#0" expanded="true" />
-                <element signature="e#7439#7455#0" expanded="true" />
-                <element signature="e#8508#8524#0" expanded="true" />
-                <element signature="e#10383#10416#0" expanded="true" />
+                <element signature="e#699#715#0" expanded="true" />
+                <element signature="e#823#839#0" expanded="true" />
+                <element signature="e#950#966#0" expanded="true" />
+                <element signature="e#1319#1339#0" expanded="true" />
+                <element signature="e#1411#1436#0" expanded="true" />
+                <element signature="e#1955#1988#0" expanded="true" />
+                <element signature="e#3933#3949#0" expanded="true" />
+                <element signature="e#5079#5095#0" expanded="true" />
+                <element signature="e#6954#6987#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,15 +67,27 @@
       <file leaf-file-name="bid_driver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+            <state relative-caret-position="510">
+              <caret line="61" column="81" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
               <folding>
-                <element signature="e#2672#2694#0" expanded="true" />
-                <element signature="e#3550#3572#0" expanded="true" />
-                <element signature="e#5097#5119#0" expanded="true" />
-                <element signature="e#10748#10776#0" expanded="true" />
-                <element signature="e#12114#12158#0" expanded="true" />
-                <element signature="e#16080#16088#0" expanded="true" />
+                <element signature="e#3473#3495#0" expanded="true" />
+                <element signature="e#4351#4373#0" expanded="true" />
+                <element signature="e#5898#5920#0" expanded="true" />
+                <element signature="e#11549#11577#0" expanded="true" />
+                <element signature="e#12915#12959#0" expanded="true" />
+                <element signature="e#16881#16889#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="function_collection_withP_tactics.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_tactics.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,16 +101,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Show.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/Show.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -212,8 +205,9 @@
         <option value="$PROJECT_DIR$/src/main/java/leetcode/BestTimetoBuyandSellStock.java" />
         <option value="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection.java" />
         <option value="$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/timestamp_dataObjectUpdate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java" />
         <option value="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_tactics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java" />
       </list>
     </option>
   </component>
@@ -356,6 +350,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="BidEngine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeOperation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BidEngineOfDspOffline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BidEngineOfDspOffline" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BidEngine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -921,17 +949,17 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4592934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45898235" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26375908" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26272067" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19771242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17270789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20842217" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -961,7 +989,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java</url>
-          <line>178</line>
+          <line>109</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
@@ -975,17 +1003,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/leetcode/AddTwoNumbers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#196#197#0" expanded="false" />
-            <element signature="e#227#228#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/DataStruct/bid_dspinfo_data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -999,12 +1016,12 @@
         <state relative-caret-position="476">
           <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
-            <element signature="e#2672#2694#0" expanded="true" />
-            <element signature="e#3550#3572#0" expanded="true" />
-            <element signature="e#5097#5119#0" expanded="true" />
-            <element signature="e#10748#10776#0" expanded="true" />
-            <element signature="e#12114#12158#0" expanded="true" />
-            <element signature="e#16080#16088#0" expanded="true" />
+            <element signature="e#3473#3495#0" expanded="true" />
+            <element signature="e#4351#4373#0" expanded="true" />
+            <element signature="e#5898#5920#0" expanded="true" />
+            <element signature="e#11549#11577#0" expanded="true" />
+            <element signature="e#12915#12959#0" expanded="true" />
+            <element signature="e#16881#16889#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1090,12 +1107,12 @@
         <state relative-caret-position="646">
           <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
-            <element signature="e#2672#2694#0" expanded="true" />
-            <element signature="e#3550#3572#0" expanded="true" />
-            <element signature="e#5097#5119#0" expanded="true" />
-            <element signature="e#10748#10776#0" expanded="true" />
-            <element signature="e#12114#12158#0" expanded="true" />
-            <element signature="e#16080#16088#0" expanded="true" />
+            <element signature="e#3473#3495#0" expanded="true" />
+            <element signature="e#4351#4373#0" expanded="true" />
+            <element signature="e#5898#5920#0" expanded="true" />
+            <element signature="e#11549#11577#0" expanded="true" />
+            <element signature="e#12915#12959#0" expanded="true" />
+            <element signature="e#16881#16889#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1379,36 +1396,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="48" column="51" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+        <state relative-caret-position="-187">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#2672#2694#0" expanded="true" />
-            <element signature="e#3550#3572#0" expanded="true" />
-            <element signature="e#5097#5119#0" expanded="true" />
-            <element signature="e#10748#10776#0" expanded="true" />
-            <element signature="e#12114#12158#0" expanded="true" />
-            <element signature="e#16080#16088#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#699#715#0" expanded="true" />
+            <element signature="e#823#839#0" expanded="true" />
+            <element signature="e#950#966#0" expanded="true" />
+            <element signature="e#1319#1339#0" expanded="true" />
+            <element signature="e#1411#1436#0" expanded="true" />
+            <element signature="e#1955#1988#0" expanded="true" />
+            <element signature="e#3933#3949#0" expanded="true" />
+            <element signature="e#5079#5095#0" expanded="true" />
+            <element signature="e#6954#6987#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_update.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/BidStrategy/bid_driver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        <state relative-caret-position="510">
+          <caret line="61" column="81" selection-start-line="61" selection-start-column="81" selection-end-line="61" selection-end-column="81" />
+          <folding>
+            <element signature="e#3473#3495#0" expanded="true" />
+            <element signature="e#4351#4373#0" expanded="true" />
+            <element signature="e#5898#5920#0" expanded="true" />
+            <element signature="e#11549#11577#0" expanded="true" />
+            <element signature="e#12915#12959#0" expanded="true" />
+            <element signature="e#16881#16889#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/BidEngine/FunctionCollection/function_collection_withP_tactics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#680#696#0" expanded="true" />
-            <element signature="e#804#820#0" expanded="true" />
-            <element signature="e#931#947#0" expanded="true" />
-            <element signature="e#1300#1320#0" expanded="true" />
-            <element signature="e#1392#1417#0" expanded="true" />
-            <element signature="e#1936#1969#0" expanded="true" />
-            <element signature="e#7439#7455#0" expanded="true" />
-            <element signature="e#8508#8524#0" expanded="true" />
-            <element signature="e#10383#10416#0" expanded="true" />
           </folding>
         </state>
       </provider>

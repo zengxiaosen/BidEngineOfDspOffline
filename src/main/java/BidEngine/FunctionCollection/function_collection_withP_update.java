@@ -13,7 +13,7 @@ import java.util.Map;
  * Created by Administrator on 2017/3/10.
  */
 public class function_collection_withP_update {
-    public static void Pintellegance_dspId(List<timestamp_dataObject> timestamp_dataObjects_list, Integer dspid_test) {
+    public static HashMap<Double, Double> Pintellegance_dspId(List<timestamp_dataObject> timestamp_dataObjects_list, Integer dspid_test) {
 
         //List<dspid_allMeanOther_collection> dac_list = new ArrayList<dspid_allMeanOther_collection>();
         HashMap<Double, Double> IdeaAlltimeBidprice = new HashMap<Double, Double>();
@@ -65,13 +65,6 @@ public class function_collection_withP_update {
                 }
             //-2
             }
-
-
-
-            //处理由于P值影响，统计出相应指标
-            /*for (Map.Entry<String, ArrayList<StringBuffer>> entry : datainformation_new_merge.entrySet()) {
-                String dspid = entry.getKey();
-            }*/
             //-1
         }
         //显示总的ideaid, bidprice(所有时间片）
@@ -79,70 +72,7 @@ public class function_collection_withP_update {
         //把所有时间片的bidprice×100作为预算
         allIdeaBudget = getAllIdeaBudgetMap(allIdeaBudget);
 
-        //根据<ideaid, allbidprice>重新计算： 加入策略,在每个idea出价之前给予一个random值
-        /**
-         * 对adxpid=56，dspid=11167的竞价数据，统计在每个ideaid出价之前事先给予一个random值。
-         若这个ideaid最后赢了，并且它事先的random值大于0.5，则出价，也就是所对应的各项数据不变；
-         若这个ideaid最后赢了，而且它事先的random值小于等于0.5，则不出价，那么各项指标需要更改，并且把对应的出价bidprice压入队列queue中，每个ideaid维护这样一条queue；
-         若这个ideaid最后输了，如果在时间片内它之前的时间段，有这个ideaid赢了而random值小于0.5的情况，那么就把该ideaid所对应的queue取出一个bidprice，替换掉本bidprice重新参与竞价，
-         在本广告位adxpid同一次请求requestid的情况下和其他dspid进行bidprice数据对比
-         ， 如果它最后还是没有赢，就不改变其他状态数据，如果它最后赢了，就改变其他状态数据。
-         */
-        ////////////////////////////////////////////////////////////////////////////
-        /*for (int i = 0; i < timestamp_dataObjects_list.size(); i++) {
-            //对于一个时间片进行操作
-            timestamp_dataObject tdo = timestamp_dataObjects_list.get(i);
-            HashMap<String, ArrayList<StringBuffer>> datainformation_new_merge = tdo.getDatainformation_new_merge();
-            int timestamp_index = i;
-
-            for (Map.Entry<String, ArrayList<StringBuffer>> entry : datainformation_new_merge.entrySet()) {
-                String dspid = entry.getKey();
-                Map<Double, ArrayList<StringBuffer>> ConcernedstatisticOfIdeaid = null;
-                // 只对特定的dspid做研究
-                if(dspid.equals(String.valueOf(dspid_test))){
-                    System.out.println("进入11167");
-                    Map<Double, ArrayList<StringBuffer>> statisticOfIdeaid = new HashMap<Double, ArrayList<StringBuffer>>();
-                    ConcernedstatisticOfIdeaid = new HashMap<Double, ArrayList<StringBuffer>>();
-
-                    ArrayList<StringBuffer> result = entry.getValue();
-                    *//**
-                     * 一个dspid的各个素材ideaid的各项数据指标
-                     * 总的bidprice，平均bidprice，总的winnercost，平均winnercost，budget（待加）
-                     *//*
-                    // 解析出ideaid为key, 其他字段为result原封不动的<key, value>
-                    statisticOfIdeaid = Getdealdata(result);
-                    //ShowTimeDspDealData(timestamp_index, dspid, statisticOfIdeaid);
-                    //关注指标(一个时间片内）
-                    ConcernedstatisticOfIdeaid = GetConcernedDealData(result);
-                    //就是要看一个时间片内的影响
-                    PtoBid(ConcernedstatisticOfIdeaid, allInto);
-                    //得到各个ideaid进入11167dspid代理的allbidprice
-                    HashMap<Double, Double> IdeaAllBidpriceMap = ShowTimeDspDealConcernedData(timestamp_index, dspid, ConcernedstatisticOfIdeaid);
-                    for(Map.Entry<Double, Double> temp2 : IdeaAllBidpriceMap.entrySet()){
-                        Double key = temp2.getKey();
-                        Double value = temp2.getValue();
-                        Double l = allInto.get(key);
-                        if(l == null){
-                            l = value;
-                        }else{
-                            l += value;
-                        }
-                        allInto.put(key, l);
-                    }
-                }
-                //-2
-            }
-
-
-
-            //处理由于P值影响，统计出相应指标
-            *//*for (Map.Entry<String, ArrayList<StringBuffer>> entry : datainformation_new_merge.entrySet()) {
-                String dspid = entry.getKey();
-            }*//*
-            //-1
-        }*/
-
-        ////////////////////////////////////////////////////////////////////////////
+        return allIdeaBudget;
 
     }
 
@@ -154,6 +84,7 @@ public class function_collection_withP_update {
             Double IdeaId = entry.getKey();
             Double AllBidprice = entry.getValue();
             Double Budget = AllBidprice * 100;
+            System.out.println("素材id: " + IdeaId + "的总预算budget: " + Budget);
             IdeaBudgetMap.put(IdeaId, Budget);
         }
         return IdeaBudgetMap;
