@@ -61,6 +61,9 @@ public class bid_driver {
 
         function_collection_withP_tactics.Pintellegance_IdeaId(timestamp_dataObjectUpdate_list, ideaid_budget);
 
+        //不加策略，作为对比
+        function_collection_withP_tactics.WithoutPintellegance_IdeaId(timestamp_dataObjectUpdate_list, ideaid_budget);
+
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -358,6 +361,7 @@ public class bid_driver {
                             temp1.add(bidPrice);
                             result.put(ideaId, temp1);
 
+
                         }
 
                     }else if( count == 2){
@@ -373,13 +377,21 @@ public class bid_driver {
                         ext = s;//dsp 维度的 扩展字段。 rt=xxx:DSP的响应时间，单位为毫秒; dspStatus=1或者0,1 DSP 是正式投放，0 DSP为测试投放;
                     }
                 }
+                //int size = result.size();
                 if(dspid.equals("11167")){
                     String key_new = ad_request_id_new;
                     HashMap<String,ArrayList<String>> ll = datainformation_new_merge.get(key_new);
                     if(ll == null || ll.equals("")){
                         ll = result;
+                        datainformation_new_merge.put(key_new, ll);
+                    }else{
+                        //加到后面
+                        for(Map.Entry<String, ArrayList<String>> entry2 : ll.entrySet()){
+                            String key2 = entry2.getKey();
+                            ArrayList<String> val2 = entry2.getValue();
+                            ll.put(key2, val2);
+                        }
                     }
-                    datainformation_new_merge.put(key_new, ll);
                 }
             }
 
@@ -392,7 +404,7 @@ public class bid_driver {
         //ArrayList<Integer> num3 = new ArrayList<Integer>(num1);
         List arrayList1 = new ArrayList(arrayList);
         ArrayList<HashMap<String, ArrayList<StringBuffer>>> MeanTotal = new ArrayList<HashMap<String, ArrayList<StringBuffer>>>();
-        Long time_interval = Long.valueOf(1000);//毫秒级别时间间隔
+        Long time_interval = Long.valueOf(1000000);//毫秒级别时间间隔
 
         for(int i=0; i< arrayList.size(); i++){
             ArrayList<String> timeTemp = new ArrayList<String>();
